@@ -153,3 +153,25 @@ $('.active-blog-slider').owlCarousel({
     $('.default-header').removeClass('header-scrolled');
   }
 });
+function handleMobileFeatureDropdown() {
+  if (window.innerWidth <= 768) {
+    const features = document.querySelectorAll('.feature-dropdown');
+
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    features.forEach(feature => {
+      observer.observe(feature);
+    });
+  }
+}
+
+document.addEventListener('DOMContentLoaded', handleMobileFeatureDropdown);

@@ -2832,6 +2832,7 @@ h6 {
   box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 
+/* === Feature Cards Expand === */
 .feature-dropdown .feature-content {
   max-height: 0;
   overflow: hidden;
@@ -2839,43 +2840,59 @@ h6 {
   transition: all 0.4s ease;
 }
 
+/* Desktop: se expande con hover */
 .feature-dropdown:hover .feature-content {
-  max-height: 300px; /* ajustable según el contenido */
+  max-height: 300px;
   opacity: 1;
   margin-top: 10px;
 }
-/* Por defecto: dropdown blanco */
+
+/* Mobile: se expande automáticamente si tiene clase "active" */
+.feature-dropdown.active .feature-content {
+  max-height: 300px;
+  opacity: 1;
+  margin-top: 10px;
+}
+
+/* === Dropdown Idioma === */
+
+/* Por defecto: letras blancas */
 .dropdown-menu .dropdown-item {
-  color: white;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  border-radius: 6px; /* 🎯 Borde redondeado */
-  padding: 8px 12px;
-  margin: 4px; /* separa visualmente los ítems */
-}
-
-/* Al hacer scroll: dropdown negro */
-.header-scrolled .dropdown-menu .dropdown-item {
-  color: black !important;
-}
-
-.dropdown-menu .dropdown-item:hover {
-  background-color: #0B4F38 !important;
   color: white !important;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border-radius: 6px;
+  padding: 8px 12px;
+  margin: 4px;
 }
 
+/* Hover color */
+.dropdown-menu .dropdown-item:hover,
 .header-scrolled .dropdown-menu .dropdown-item:hover {
   background-color: #0B4F38 !important;
   color: white !important;
 }
 
-/* Estilos por defecto: letras blancas */
-.dropdown-menu .dropdown-item {
-  color: white !important;
+/* Scroll (modo escritorio): letra negra */
+.header-scrolled .dropdown-menu .dropdown-item {
+  color: black !important;
 }
 
-/* Estilo específico para móvil: mantener blanco también */
+/* Mobile: mantener letras blancas */
 @media (max-width: 991.98px) {
   .navbar-collapse.show .dropdown-menu .dropdown-item {
     color: white !important;
   }
+}
+
+@media (max-width: 991.98px) {
+  .feature-dropdown.active .feature-content {
+    max-height: 300px;
+    opacity: 1;
+    margin-top: 10px;
+  }
+}
+.feature-dropdown .feature-content,
+.feature-dropdown .title h4,
+.feature-dropdown p {
+  text-align: justify;
 }

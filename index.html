@@ -228,7 +228,7 @@
 	</section>
 	<!-- End Experiences Area -->
 
-			<!-- Start Features Area -->
+			
 			<!-- Start Features Area -->
 <section class="feature-area section-gap" id="features">
 	<div class="container">
@@ -317,7 +317,7 @@
 	</div>
   </section>
   <!-- End Features Area -->
-	<!-- End Features Area -->
+	
 
 
 			<!-- Start gallery Area -->
@@ -528,6 +528,16 @@
 			<script src="js/jquery.counterup.min.js"></script>
 			<script src="js/waypoints.min.js"></script>		
 			<script src="js/main.js"></script>	
+			<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const isMobile = window.innerWidth <= 991.98;
+    if (isMobile) {
+      document.querySelectorAll('.feature-dropdown').forEach(card => {
+        card.classList.add('active');
+      });
+    }
+  });
+</script>
 			<div id="google_translate_element" style="display: none;"></div>
 			<script>
 				function translatePage(lang) {
