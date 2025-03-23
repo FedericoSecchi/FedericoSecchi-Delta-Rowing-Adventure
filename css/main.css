@@ -1928,7 +1928,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .section-gap {
-  padding: 40px 0;
+  padding: 120px 0;
 }
 
 .section-title {
@@ -2895,4 +2895,19 @@ h6 {
 .feature-dropdown .title h4,
 .feature-dropdown p {
   text-align: justify;
+}
+@media (max-width: 768px) {
+  .goog-te-banner-frame.skiptranslate,
+  .goog-tooltip,
+  .goog-te-menu-value {
+    display: none !important;
+  }
+
+  body {
+    top: 0px !important; /* evitar el desplazamiento que deja el banner */
+  }
+}
+
+p {
+  margin: 0;
 }
