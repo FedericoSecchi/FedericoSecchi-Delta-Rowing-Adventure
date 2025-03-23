@@ -145,3 +145,11 @@ $('.active-blog-slider').owlCarousel({
       });   
 
  });
+
+ $(window).on('scroll', function () {
+  if ($(this).scrollTop() > 100) {
+    $('.default-header').addClass('header-scrolled');
+  } else {
+    $('.default-header').removeClass('header-scrolled');
+  }
+});
