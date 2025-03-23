@@ -2799,3 +2799,48 @@ h6 {
 .navbar-nav .nav-link {
   color: white !important;
 }
+
+.card-toggle {
+  cursor: pointer;
+}
+
+.single-feature .card-content {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 1.0s ease, opacity 0.5s ease;
+}
+
+.single-feature:hover .card-content {
+  max-height: 500px; /* suficiente para que se muestre todo el texto */
+  opacity: 1;
+}
+.single-feature {
+  min-height: 110px; /* o lo que necesites */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.feature-dropdown {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  background-color: #f9f9ff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.feature-dropdown .feature-content {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+.feature-dropdown:hover .feature-content {
+  max-height: 300px; /* ajustable según el contenido */
+  opacity: 1;
+  margin-top: 10px;
+}
