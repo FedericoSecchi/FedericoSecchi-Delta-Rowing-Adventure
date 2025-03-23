@@ -27,6 +27,20 @@
 			<link rel="stylesheet" href="css/animate.min.css">
 			<link rel="stylesheet" href="css/owl.carousel.css">
 			<link rel="stylesheet" href="css/main.css">
+			
+
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'es',
+      includedLanguages: 'en,de,it,pt,fr',
+      layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+      autoDisplay: false
+    }, 'google_translate_element');
+  }
+</script>
+
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 		</head>
 		<body>
 			<!-- start banner Area -->
@@ -47,10 +61,23 @@
 							<li><a href="#about">Experiencia</a></li>
 							<!-- <li><a href="#boats">Embarcaciones</a></li> -->
 							<!-- <li><a href="#lodging">Alojamientos</a></li> -->
-							<!-- <li><a href="#team">Equipo</a></li> -->
+	
 							<li><a href="#gallery">Fotos</a></li>
 							<li><a href="#faq">FAQ</a></li>
 							<li><a href="#contact">Contacto</a></li>
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" href="#" id="langDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								  IDIOMA
+								</a>
+								<div class="dropdown-menu dropdown-menu-right" aria-labelledby="langDropdown">
+								  <a class="dropdown-item" href="#" onclick="translatePage('es')">ESPAÑOL</a>
+								  <a class="dropdown-item" href="#" onclick="translatePage('en')">ENGLISH</a>
+								  <a class="dropdown-item" href="#" onclick="translatePage('de')">DEUTSCH</a>
+								  <a class="dropdown-item" href="#" onclick="translatePage('it')">ITALIANO</a>
+								  <a class="dropdown-item" href="#" onclick="translatePage('pt')">PORTUGUÊS</a>
+								  <a class="dropdown-item" href="#" onclick="translatePage('fr')">FRANÇAIS</a>
+								</div>
+							  </li>
 						</ul>
 					</div>
 				</div>
@@ -493,5 +520,15 @@
 			<script src="js/jquery.counterup.min.js"></script>
 			<script src="js/waypoints.min.js"></script>		
 			<script src="js/main.js"></script>	
-		</body>
-	</html>
+			<div id="google_translate_element" style="display: none;"></div>
+			<script>
+				function translatePage(lang) {
+				  const url = window.location.href.split('#')[0];
+				  window.location.href = url + '#googtrans(es|' + lang + ')';
+				  location.reload();
+				}
+			  </script>
+			</body>
+			
+
+</html>

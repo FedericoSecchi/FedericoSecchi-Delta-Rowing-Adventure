@@ -2771,3 +2771,31 @@ h6 {
 .item.single-gallery {
   margin: 8px; /* 8px x lado = 16px entre imágenes */
 }
+.dropdown-menu {
+  background-color: transparent !important;
+  border: none;
+  padding: 0;
+  margin-top: 0.5rem; /* para que no quede pegado al botón */
+  min-width: 8rem;
+}
+
+.dropdown-menu .dropdown-item {
+  color: white !important;
+  font-weight: 600;
+  padding: 8px 16px;
+  text-align: left;
+}
+
+.dropdown-menu .dropdown-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+#langDropdown {
+  color: white !important;
+  padding: 0rem 1rem;
+  display: inline-block;
+}
+
+.navbar-nav .nav-link {
+  color: white !important;
+}
