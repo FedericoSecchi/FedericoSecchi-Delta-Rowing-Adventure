@@ -2768,3 +2768,6 @@ h6 {
   object-fit: cover; /* Asegura que el video cubra todo el fondo */
   z-index: -1;
 }
+.item.single-gallery {
+  margin: 8px; /* 8px x lado = 16px entre imágenes */
+}
