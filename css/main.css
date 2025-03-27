@@ -1950,11 +1950,11 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-.p1-gradient-bg, .primary-btn, .primary-btn2:hover, .single-feature:hover, .video-area .overlay-bg, .single-footer-widget .click-btn, .generic-banner {
+/* .p1-gradient-bg, .primary-btn, .primary-btn2:hover, .single-feature:hover, .video-area .overlay-bg, .single-footer-widget .click-btn, .generic-banner {
   background-image: -moz-linear-gradient(0deg, #0B4F38 0%, #0B4F38 100%);
   background-image: -webkit-linear-gradient(0deg, #0B4F38 0%, #0B4F38 100%);
   background-image: -ms-linear-gradient(0deg, #0B4F38 0%, #0B4F38 100%);
-}
+} */
 
 .p1-gradient-color, .counter-left h2, .footer-social a:hover i, .single-footer-widget .bb-btn {
   background: -moz-linear-gradient(0deg, #0B4F38 0%, #0B4F38 100%);
@@ -2367,14 +2367,14 @@ h1, h2, h3, h4, h5, h6 {
   color: #222;
 }
 
-.single-feature:hover {
+/* .single-feature:hover {
   cursor: pointer;
   color: #fff;
-}
+} */
 
-.single-feature:hover a, .single-feature:hover .title .lnr {
+/* .single-feature:hover a, .single-feature:hover .title .lnr {
   color: #fff;
-}
+} */
 
 .single-feature .title .lnr {
   color: #222;
@@ -2811,43 +2811,19 @@ h6 {
   transition: max-height 1.0s ease, opacity 0.5s ease;
 }
 
-.single-feature:hover .card-content {
+/* .single-feature:hover .card-content {
   max-height: 500px; /* suficiente para que se muestre todo el texto */
   opacity: 1;
-}
+} */
 .single-feature {
   min-height: 110px; /* o lo que necesites */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-.feature-dropdown {
-  position: relative;
-  height: 100%;
-  overflow: hidden;
-  transition: all 0.3s ease;
-  background-color: #f9f9ff;
-  padding: 25px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-}
 
-/* === Feature Cards Expand === */
-.feature-dropdown .feature-content {
-  max-height: 0;
-  overflow: hidden;
-  opacity: 0;
-  transition: all 0.4s ease;
-}
 
-/* Desktop: se expande con hover */
-.feature-dropdown:hover .feature-content {
-  max-height: 300px;
-  opacity: 1;
-  margin-top: 10px;
-}
-
-/* Mobile: se expande automáticamente si tiene clase "active" */
+Mobile: se expande automáticamente si tiene clase "active"
 .feature-dropdown.active .feature-content {
   max-height: 300px;
   opacity: 1;
@@ -2884,13 +2860,13 @@ h6 {
   }
 }
 
-@media (max-width: 991.98px) {
+/* @media (max-width: 991.98px) {
   .feature-dropdown.active .feature-content {
     max-height: 300px;
     opacity: 1;
     margin-top: 10px;
   }
-}
+} */
 .feature-dropdown .feature-content,
 .feature-dropdown .title h4,
 .feature-dropdown p {
@@ -2910,4 +2886,91 @@ h6 {
 
 p {
   margin: 0;
+}
+
+.text-left,
+.text-start {
+  text-align: left !important;
+}
+
+.navbar-brand img {
+  width: 200px; /* Ajusta el tamaño */
+  height: auto;
+  position: relative; /* Cambia a relative si está en absolute/fixed */
+  z-index: 10; /* Asegúrate que no sea muy alto */
+}
+
+/* ==== Estilos para la sección del equipo ==== */
+.team-feature {
+  /* min-height: 300px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Asegura que los contenedores internos también se ajusten */
+.team-feature .team-profile {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 15px auto; /* Centra las imágenes */
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Ajusta el tamaño de las cards para que todas tengan la misma altura */
+#team .col-lg-4,
+#team .col-md-6 {
+  display: flex;
+}
+
+#team .team-feature {
+  width: 100%;
+  height: 100%;
+}
+
+.team-area .single-feature {
+  padding-top: 20px; /* Reduce el padding superior */
+  padding-bottom: 20px; /* Reduce el padding inferior */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Alinea el contenido hacia arriba */
+  align-items: left; /* Centra horizontalmente */
+}
+
+.team-area .team-profile {
+  margin-bottom: 10px; /* Espacio mínimo entre la imagen y el texto */
+}
+
+.team-area h5, 
+.team-area p, 
+.team-area ul {
+  margin-top: 5px; /* Ajusta los márgenes para acercar el contenido */
+  margin-bottom: 5px;
+  text-align: left; /* Asegura que el texto quede alineado */
+}
+
+.team-area ul {
+  padding-left: 0; /* Evita desplazamiento lateral */
+  list-style-position: inside; /* Alinea íconos */
+}
+
+/* Elimina márgenes y padding en listas dentro de .team-feature */
+.team-feature ul {
+  padding-left: 0 !important; /* Elimina el padding izquierdo */
+  margin-top: 10px !important; /* Ajusta el margen superior */
+  list-style: none !important; /* Elimina viñetas si las hubiera */
+}
+
+/* Ajusta márgenes y padding de los <li> */
+.team-feature ul li {
+  margin: 0 !important; /* Elimina márgenes extra */
+  padding: 2px 0 !important; /* Controla el espacio entre líneas */
+  font-size: 14px !important; /* Tamaño de fuente para coincidir con <p> */
+  line-height: 1.4 !important; /* Espaciado de línea para coincidir con <p> */
+}
+
+/* Ajuste del margen del nombre */
+.team-feature h5 {
+  margin-bottom: 5px !important; /* Espacio más pequeño debajo del nombre */
 }
