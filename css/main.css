@@ -3069,3 +3069,14 @@ p {
 .faq-area p {
   letter-spacing: normal !important;
 }
+
+.primary-btn {
+  background-color: #0B4F38; /* Verde original */
+  color: white;
+  border: none; /* Sin bordes extra */
+  transition: background-color 0.3s ease; /* Solo cambia el color */
+}
+
+.primary-btn:hover {
+  background-color: #17a673 !important; /* Verde al pasar el mouse */
+  color: white !important;
