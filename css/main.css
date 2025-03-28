@@ -3051,3 +3051,14 @@ p {
   text-align: left;
   line-height: 1.5;
 }
+
+.menu-content {
+  text-align: center !important;
+  margin: 0 auto; /* Centra horizontalmente */
+}
+
+.menu-content h1,
+.menu-content p {
+  margin: 0 auto;
+  text-align: center; /* Asegura el centrado del texto */
+}
