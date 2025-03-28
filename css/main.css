@@ -3062,3 +3062,10 @@ p {
   margin: 0 auto;
   text-align: center; /* Asegura el centrado del texto */
 }
+
+/* Elimina el interletrado para FAQ */
+.faq-area h1,
+.faq-area h2,
+.faq-area p {
+  letter-spacing: normal !important;
+}
