@@ -175,3 +175,4 @@ function handleMobileFeatureDropdown() {
 }
 
 document.addEventListener('DOMContentLoaded', handleMobileFeatureDropdown);
+

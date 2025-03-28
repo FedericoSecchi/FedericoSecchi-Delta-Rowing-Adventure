@@ -3080,3 +3080,22 @@ p {
 .primary-btn:hover {
   background-color: #17a673 !important; /* Verde al pasar el mouse */
   color: white !important;
+
+  .owl-carousel .owl-nav {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    pointer-events: none;
+  }
+
+/* Elimina los dots del carousel de experiencias */
+.active-works-carousel .owl-dots {
+  display: none !important;
+  visibility: hidden !important;
+  height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
